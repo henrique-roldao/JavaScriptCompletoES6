@@ -12,7 +12,6 @@ Trata de um curso onde solidificamos nossa base em JavaScript puro, para futuram
 * [x]  02 - JavaScript Para Iniciantes
 * [x]  03 - Dom Para Iniciantes
 * [ ]  04 - Objetos
-* [ ]  04 - Objetos
 * [ ]  05 - Efeitos na DOM
 * [ ]  06 - JavaScript Assíncrono
 * [ ]  07 - Classes
