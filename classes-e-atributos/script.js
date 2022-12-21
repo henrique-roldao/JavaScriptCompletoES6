@@ -25,7 +25,6 @@ console.log(possuiAlt);
 console.log(srcImg);
 
 // Exercícios
-
 // Adicione a classe ativo a todos os itens do menu
 const itensMenu = document.querySelectorAll('.menu a');
 itensMenu.forEach((item) => {
