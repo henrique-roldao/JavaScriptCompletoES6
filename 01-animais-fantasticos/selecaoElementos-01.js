@@ -8,13 +8,13 @@ console.log(imagensAnimais);
 
 // Selecione todos os links internos (onde o href começa com #)
 const linksInternos = document.querySelectorAll('[href^="#"]');
-linksInternos.forEach(function(item){
+linksInternos.forEach(function (item) {
     console.log(item);
 });
 
 // Selecione todos os h2 dentro de .animais-descricao
 const h2Animais = document.querySelectorAll('.animais-descricao h2');
-h2Animais.forEach(function(item){
+h2Animais.forEach(function (item) {
     console.log(item);
 });
 
