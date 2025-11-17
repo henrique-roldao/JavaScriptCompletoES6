@@ -3,28 +3,28 @@ name: Atualizar Progresso
 on:
   push:
     paths:
-      - 'modulos/**'
+      - "modulos/**"
+  workflow_dispatch:
 
 jobs:
-  update:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Contar módulos concluídos
-        id: progress
+      - name: Calcular progresso
+        id: calc
         run: |
-          total=12
-          current=$(ls modulos | wc -l)
-          percent=$(( 100 * current / total ))
-          echo "{ \"schemaVersion\": 1, \"label\": \"Progresso\", \"message\": \"${percent}% (${current}/12)\", \"color\": \"blue\" }" > .progress.json
+          total=$(ls modulos | wc -l)
+          feitos=$(grep -il "feito" modulos/* | wc -l)
 
-      - name: Commit
-        run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
-          git add .progress.json
-          git commit -m "Atualizando progresso" || echo "Sem mudanças"
-          git push
+          echo "{ \"done\": $feitos, \"total\": $total }" > .progress.json
+          echo "done=$feitos" >> $GITHUB_OUTPUT
+          echo "total=$total" >> $GITHUB_OUTPUT
+
+      - name: Commit progresso atualizado
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Atualizando progresso automático"
+          file_pattern: .progress.json
