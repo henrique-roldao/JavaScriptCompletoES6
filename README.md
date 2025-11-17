@@ -1,7 +1,7 @@
 # 📚 Estudos de JavaScript — Curso Completo ES6 (Origamid)
 
 ### 📊 Progresso Automático
-![Progresso](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/henrique-roldao/JavaScriptCompletoES6/main/.progress.json&label=Progresso&query=done&suffix=%2F12&color=blue)
+![Progresso](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/henrique-roldao/JavaScriptCompletoES6/main/.progress.json&label=Progresso&query=done&suffix=%2F12&color=blue&cacheSeconds=30)
 
 
 
