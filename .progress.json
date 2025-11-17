@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
   "label": "Progresso",
-  "message": "0% (0/12)",
+  "message": "X% (Y/12)",
   "color": "blue"
 }

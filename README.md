@@ -1,7 +1,6 @@
 # 📚 Estudos de JavaScript — Curso Completo ES6 (Origamid)
 
-![Progresso](https://raw.githubusercontent.com/henrique-roldao/JavaScriptCompletoES6/main/.progress.json
-)
+![Progresso](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/henrique-roldao/JavaScriptCompletoES6/main/.progress.json)
 
 Repositório dedicado aos meus estudos do curso **JavaScript Completo ES6** da **Origamid**.  
 Aqui organizo exercícios, anotações e mini-projetos desenvolvidos módulo por módulo.
