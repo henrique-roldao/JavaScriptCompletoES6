@@ -1,0 +1,30 @@
+name: Atualizar Progresso
+
+on:
+  push:
+    paths:
+      - 'modulos/**'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Contar módulos concluídos
+        id: progress
+        run: |
+          total=12
+          current=$(ls modulos | wc -l)
+          percent=$(( 100 * current / total ))
+          echo "{ \"schemaVersion\": 1, \"label\": \"Progresso\", \"message\": \"${percent}% (${current}/12)\", \"color\": \"blue\" }" > .progress.json
+
+      - name: Commit
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add .progress.json
+          git commit -m "Atualizando progresso" || echo "Sem mudanças"
+          git push
