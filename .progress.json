@@ -1,6 +1,1 @@
-{
-  "schemaVersion": 1,
-  "label": "Progresso",
-  "message": "X% (Y/12)",
-  "color": "blue"
-}
+{ "done": 2, "total": 4 }
